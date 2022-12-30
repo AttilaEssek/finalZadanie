@@ -33,6 +33,13 @@ h2{
   width: 100%;
   top: inherit;
 }
+.rulesText{
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  width: 100%;
+  top: inherit;
+}
 #wall{
   display: table-footer-group;
   object-fit: cover;
