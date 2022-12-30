@@ -1,0 +1,17 @@
+{
+    "name": "Plumber man",
+    "short_name": "Plumber man",
+    "start_url": ".",
+    "background_color": "#2F2F2F",
+    "theme_color": "#0F0B0B",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "images/favicon.png",
+            "sizes": "980x980",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+
+}

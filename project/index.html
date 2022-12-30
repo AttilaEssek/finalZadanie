@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Plumber man</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0F0B0B">
+  <link href="./lib/bootstrap.min.css" rel="stylesheet">
+  <link href="./lib/bootstrap.min.css.map" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png">
+  <script src="./lib/jquery-3.6.0.min.js"></script>
+  <script src="./lib/bootstrap.bundle.min.js"></script>
+  <link href="./styles/style.css" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href=".images/favicon.png">
+
+  <!-- <script src="lib/bootstrap.bundle.min.js.map"></script> -->
+</head>
+<body>
+    <header class="text-center">
+            <h1>Plumber man</h1>
+    </header>
+    <div class="container-fluid text-center my-2 px-0">
+        <div id="game">
+            <div class="container-fluid gameBorder" id="border">
+                <div class="row">
+                  <div class="col-4 ">
+                    <div class="gridSistem1">
+                    </div>
+                    <div class="buttonSistem">
+                        <div class="arrow" id="up">
+                          <img src="./images/arrowUp.png" alt="up" class="arrow" id="arrowUp"> 
+                        </div>
+                        <div class="arrow" id="down">
+                          <img src="./images/arrowDown.png" alt="down" class="arrow" id="arrowDown"> 
+                        </div>
+                    </div>                      
+                    <div class="buttonSistem2">
+                      <button id="start" class="btnGame">open</button>
+                      <button id="cheat" class="btnGame">cheat
+                      </button>
+                      <button id="clear" class="btnGame">clear
+                      </button>
+                      <button id="back" class="btnGame">back
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-8 p-0 ">
+                    <div class="gridSistem2">
+                    </div>
+                  </div>
+                </div>
+             </div>  
+            <img src="./images/wall2.jpg" alt="wall" id="wall">
+        </div>
+     </div>
+
+     <div class="modala" id="mod">
+      <div class="modala-content" id="modC">
+        <h2></h2>
+        <button class="btn btn-outline-primary m-2" id="continue">Continue</button>
+        <button class="btn btn-outline-primary m-2" id="next">Next level</button>
+      </div> 
+    </div>
+     <script src="./scripts/elements.js"></script>
+     <script src="./scripts/cookies.js"></script>   
+    <script src="./scripts/script1.js"></script>
+    <script src="./scripts/script2.js"></script>     
+    <script src="./scripts/index.js"></script>
+</body>
+</html>
