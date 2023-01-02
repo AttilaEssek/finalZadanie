@@ -6,6 +6,13 @@ var dataHard;
 var timerId;
 var actualLevel;
 
+/*if (window.orientation !== 'undefined') {
+    console.log("this is a mobile");
+    screen.orientation.lock("landscape");
+}else{
+    console.log("this is a desktop");
+}*/
+
 // locOrientation = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation || screen.orientation.lock;
 // locOrientation('landscape');
 initGame();
@@ -58,6 +65,29 @@ function initGame(){
     groupButtons.appendChild(button3);
     gameDiv.appendChild(groupButtons)
 }
+
+
+document.addEventListener("DOMContentLoaded", initDetect)
+
+/*function initDetect(){
+  window.addEventListener("resize", detectDevice)
+  detectDevice()
+}
+
+ detectDevice = () => {
+  let detectObj = {
+    device: !!navigator.maxTouchPoints ? 'mobile' : 'computer',
+    orientation: !navigator.maxTouchPoints ? 'desktop' : !window.screen.orientation.angle ? 'portrait' : 'landscape'
+  }
+  if(detectObj.device=="mobile"){
+    console.log("asaaaaaaaaaaaaaaaaf");
+    screen.lockOrientation('portrait');
+  }
+  //console.log(detectObj.)
+  return detectObj
+}*/
+
+
 function continueGame(dCodes,dCodes2){
         console.log(data);
         console.log(actualLevel);
@@ -131,7 +161,7 @@ function displayRules(){
     a2.style.padding="0";
     rulesText.appendChild(a2);
     let a3=document.createElement("p");
-    a3.innerHTML="3. - you'll see a bar at the left, from there you can drag a pipe and drop it into the grid to the right. The goal is to make a path from the faucet to the end pipe. Tapping a placed pipe will rotate it. You can put back a pipe back to its place where you picked it up from. If you think you put together a working path, click/tap the 'open' button to check your path. Before you can make any changes to yout path, you need to close the water. Hitting the clear button will reset the grid. Hitting the 'cheat' button will show a working path. If you wish to go back to the menus, hit the 'back button'";
+    a3.innerHTML="3. - you'll see a bar at the left, from there you can drag a pipe and drop it into the grid to the right. The goal is to make a path from the faucet to the end pipe. Tapping a placed pipe will rotate it. You can put back a pipe back to its place where you picked it up from. If you think you put together a working path, click/tap the 'open' button to check your path. Before you can make any changes to yout path, you need to close the water. Hitting the clear button will reset the grid, also on a mobile phone with sensors, shaking the device will clear the grid. Hitting the 'cheat' button will show a working path. If you wish to go back to the menus, hit the 'back button'";
     a3.style.margin="5px";
     a3.style.color="white";
     a3.style.fontSize="2vw";

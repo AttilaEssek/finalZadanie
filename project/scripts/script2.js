@@ -11,6 +11,10 @@ var actualMenu;
 var dragDropElem;
 var levelName;
 var level;
+const shakeTreshold=25;
+let sensor = new LinearAccelerationSensor({frequency: 60});
+
+
 function initialLeftGrid(){
   $(".buttonSistem").attr("style","display:block");
   $(".buttonSistem2").attr("style","display:");
@@ -330,6 +334,18 @@ function cleanBoard(){
 changeAmount();
 setCookie(levelName,matrixElements);
 }
+
+
+sensor.addEventListener('reading', ()=>{
+  if(sensor.x > shakeTreshold || sensor.z > shakeTreshold || sensor.y > shakeTreshold){
+    cleanBoard();
+  }
+  console.log("x axis>"+sensor.x);
+});
+
+sensor.start();
+
+
 let flagLose;
 
 function gameStart(){
